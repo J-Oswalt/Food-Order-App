@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../user_styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../user_styles/productsstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../user_js/loadproducts.js"></script>
+</head>
+<body onload="loadProductContent()">
+    <div class="header"></div>
+    <div class="main">
+        
+        <div class="container">
+            <form action="" name="addMenuForm" id="form1" onsubmit="event.preventDefault();">
+                <!-- A div element to contain all ticker headings -->
+                <div class="ticker-container">
+                    <!-- A Ticker list -->
+                    <ul class="ticker">
+                        <!-- Each of the list items will have a text -->
+                        <!-- 1st heading for category related text, 2nd heading for cuisine related text -->
+                        <!-- 3rd & 4th headings for restaurants related texts -->
+                        <li class="ticker-item" id="headline1"></li>
+                        <li class="ticker-item" id="headline2"></li>
+                        <li class="ticker-item" id="headline3"></li>
+                        <li class="ticker-item" id="headline4"></li>
+                    </ul>
+                </div>
+                <a class="btn btn-secondary" style="width:fit-content;float:right;text-decoration: none;" href="../user_view/view_orderhistory.html"><b>View Order History</b></a>
+                <h1>Online Order</h1>
+                
+                <hr>
+                <div class="row p-1" id="wholemenu"></div>
+                
+                <h5 id="cuisineheading">Try new cuisine</h5>
+                <div class="row p-3" id="cuisine">
+                    <!-- All cuisine names will be displayed here -->    
+                </div>
+                
+                <h5 id="categoryheading">Get inspiration for your order</h5>
+                <div class="row p-3" id="category">
+                    <!-- All category names will be displayed here -->            
+                </div>
+                
+                <h5 id="restaurantheading">Available Restautants</h5>
+                <div class="row p-3" id="restaurant">
+                    <!-- All restaurant names will be displayed here -->        
+                </div>
+                                
+            </form>
+        </div>
+
+        </div>
+    <div class="footer"></div>
+    <script>$(document).ready(function(){
+        //There are 4 headings in the Ticker
+        //1st heading will have a text related to categories 
+        //This heading is modified to INCLUDE THE AVAILABLE CATEGORY NAMES
+        var categoryheadline = "*Indulge in our mouth-watering <b>" + 
+        $("#category p").eq(4).text() + "</b>, <b>" +
+        $("#category p").eq(1).text() + "</b>, <b>" +
+        $("#category p").eq(0).text() + "</b>, <b>" +
+        $("#category p").eq(3).text() + "</b>, <b>" +
+        $("#category p").eq(2).text() + "</b>, <b>" +
+        $("#category p").eq(5).text() + "</b> options, available now!";
+
+        //2nd heading will have a text related to cuisines 
+        //MODIFY THIS HEADING TO INCLUDE THE AVAILABLE CUISINE NAMES
+        var cuisineheadline = "*Satisfy your cravings with our diverse range of <b>" + 
+            $("#cuisine p").eq(0).text() + "</b>, <b>" +
+            $("#cuisine p").eq(1).text() + "</b>, <b>" +
+            $("#cuisine p").eq(2).text() + "</b> cuisines.";
+        
+        //3rd heading will have a text related to restaurants 
+        //MODIFY THIS HEADING TO INCLUDE THE RESTAURANT NAME
+        var restaurantheadline1 = "*<b>" +
+            $("#restaurant p").eq(0).text() + "</b> wins award for <b>Best BBQ Platter!!</b>";
+        
+        //4th heading will again have a text related to restaurants 
+        //MODIFY THIS HEADING TO INCLUDE THE RESTAURANT NAME
+        var restaurantheadline2 = "*Get free delivery on your first order @ <b>" +
+            $("#restaurant p").eq(2).text() + "</b> - use code <b>FIRSTORDER</b>";
+        
+        //Setting all heading texts in the corresponding list item
+        $("#headline1").html(categoryheadline);
+        $("#headline2").html(cuisineheadline);
+        $("#headline3").html(restaurantheadline1);
+        $("#headline4").html(restaurantheadline2);
+        //Getting the width of the ticker list containing all heading list items
+        var width = $(".ticker").width();
+        //Get the start position for ticker. Ticker should begin from position 0
+        var start_pos = 0;
+        //Get the end position for ticker. Ticker should end at width of the div ".ticker-container"
+        var end_pos = $(".ticker-container").width();
+        //Call the animate_loop function which will actually animate the ticker list 
+        animate_loop(start_pos, end_pos, width);
+    });
+
+    function animate_loop(xpos, end_pos, width){
+        xpos += 50;
+            $(".ticker").css("display", "");  
+            $(".ticker").animate({left: xpos}, "medium", "linear", function(){
+            if (xpos > end_pos) {
+                $(".ticker").css("display", "none")
+                $(".ticker").css("left", -width)
+                xpos = -width;
+            }
+            animate_loop(xpos, end_pos, width);
+            });
+        }
+    // function animate_loop(xpos, end_pos, width) {
+    //     xpos += 50;
+    //     $(".ticker").css("display", ""); // Show the ticker
+    //     $(".ticker").animate({ left: -xpos }, "slow", "linear", function() {
+    //     if (xpos > end_pos) {
+    //          $(".ticker").css("display", "none");
+    //          $(".ticker").css("left", -width);
+    //          xpos = -width;
+    //     }
+    //     animate_loop(xpos, end_pos, width);
+    //     });
+    //    }
+    </script>
+</body>
+</html>

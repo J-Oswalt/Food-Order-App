@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menus</title>
+    <link rel="stylesheet" href="../admin_styles/stylesheet.css" />
+    <script src="../admin_js/adminmenu.js"></script>
+    <script src="../admin_js/adminloadcontent.js"></script>
+  </head>
+  <body>
+    <h1>Menu</h1>
+    <div>
+      <label for="restaurant">Select Restaurant</label>
+      <select
+        name="restaurant"
+        id="restaurant"
+        onfocus="loadRestaurants(); listMenu();"
+        onchange="listMenu();"
+      >
+        <option value="BBQ">Jimmy Bear's BBQ</option>
+        <option value="Mex">El Nopel</option>
+        <option value="Seafood">Sam's St Johns Seafood</option>
+      </select>
+    </div>
+    <hr />
+    <table id="fooditems" class="table">
+      <tbody>
+        <tr>
+          <th>Food Item Image</th>
+          <th>Food Item Name</th>
+          <th>Price</th>
+        </tr>
+        <!-- <tr>
+                <td><img src="https://d1ralsognjng37.cloudfront.net/fb3cb186-8112-4c36-82d5-2393ca7902fb.webp" alt="The Bear"></td>
+                <td>The Bear</td>
+                <td>$36</td>
+            </tr>
+            <tr>
+                <td><img src="https://passthesushi.com/wp-content/uploads/2011/06/manwich.jpg" alt="Three Blind Mice"></td>
+                <td><label for="">Three Blind Mice</label></td>
+                <td>$17</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/loaded-beef-fajita-baked-potato-recipe.jpg" alt="Loaded Potato Fajita"></td>
+                <td>Loaded Potato Fajita</td>
+                <td>$17</td>
+            </tr>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgZoI-74NTOHRlcUZ2A9wtgoQu2WkxKwGWw&usqp=CAU" alt="Two Burritos"></td>
+                <td><label for="">Two Burritos</label></td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td><img src="https://i.ytimg.com/vi/AvrblWW5Bcw/sddefault.jpg" alt="Gator Tail"></td>
+                <td>Gator Tail</td>
+                <td>$12</td>
+            </tr>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS13Y4yh4L7fQuvJX-K2XCRzi62HTZpY5Io7Q&usqp=CAU" alt="Scampi Fiesta"></td>
+                <td><label for="">Scampi Fiesta</label></td>
+                <td>$21</td>
+            </tr> -->
+      </tbody>
+    </table>
+  </body>
+</html>

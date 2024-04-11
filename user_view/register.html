@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../user_styles/style.css" />
+    <script src="../user_js/validation.js"></script>
+    <script src="../user_js/authenticateuser.js"></script>
+    <link rel="stylesheet" href="../user_styles/indexstyle.css" />
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="main">
+      <div class="container">
+        <form
+          name="registerForm"
+          action="index.html"
+          class="was-validated"
+          onsubmit="return register();"
+        >
+          <h1>Register</h1>
+          <p id="formMsg">
+            Please fill in this form to complete the registration -
+          </p>
+          <hr />
+          <table>
+            <tr>
+              <td>
+                <label class="form-label" for="username"
+                  ><b>Username :</b></label
+                >
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Enter Username"
+                  onkeyup="validateUserName();"
+                  required
+                />
+                <p id="usernameValidity"></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="form-label" for="name"><b>Full Name :</b></label>
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter Full Name"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="email"><b>Email :</b></label>
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Enter Email"
+                  name="email"
+                  id="email"
+                  onkeyup="validateEmail();"
+                  required
+                />
+                <p id="emailValidity"></p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="addr"><b>Address :</b></label>
+              </td>
+              <td>
+                <textarea
+                  class="form-control"
+                  placeholder="Enter Address"
+                  name="addr"
+                  id="addr"
+                  cols="30"
+                  rows="5"
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="contact"
+                  ><b>Phone No. :</b></label
+                >
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  placeholder="Enter Phone No."
+                  name="contact"
+                  id="contact"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="pwd"><b>Password :</b></label>
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="password"
+                  placeholder="Enter Password"
+                  name="pwd"
+                  id="pwd"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="form-label" for="pwd-repeat"
+                  ><b>Repeat Password :</b></label
+                >
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="password"
+                  placeholder="Repeat Password"
+                  name="pwd-repeat"
+                  id="pwd-repeat"
+                  onkeyup="validatePwd();"
+                  required
+                />
+                <p id="pwdValidity"></p>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                By creating an account you agree to our
+                <a href="#">Terms &: Privacy</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button type="submit" class="register">Register</button></td>
+            </tr>
+          </table>
+          <hr />
+          <div class="container">
+            <p>Already have an account? <a href="signin.html">Sign in</a>.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>

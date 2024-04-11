@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Food</title>
+    <link rel="stylesheet" href="../admin_styles/stylesheet.css" />
+    <script src="../admin_js/adminfooditems.js"></script>
+  </head>
+  <body>
+    <h1>Add Food Items</h1>
+    <hr />
+    <form
+      method="post"
+      action="<?php echo site_url('admin/add_food');?>"
+      onsubmit="event.preventDefault(); addFoodItem();"
+    >
+      <table>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="fname">Food Item Name:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="fname"
+                class="form-control"
+                id="fname"
+                placeholder="Enter Food Item"
+              />
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="desc">Food Item Description:</label>
+            </td>
+            <td>
+              <textarea
+                class="form-control"
+                name="desc"
+                id="desc"
+                cols="30"
+                rows="10"
+                placeholder="Description"
+              ></textarea>
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="inStock" class="ckcontain">Available?</label>
+              <input
+                type="checkbox"
+                name="inStock"
+                class="form-check-input"
+                id="inStock"
+              />
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="isVeg" class="ckcontain">Vegeterian?</label>
+              <input
+                type="checkbox"
+                name="isVeg"
+                class="form-check-input"
+                id="isVeg"
+              />
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="category">Category:</label>
+            </td>
+            <td>
+              <select
+                class="form-select"
+                name="categoryName"
+                id="category"
+                onfocus="loadCategories();"
+              >
+                <!-- <option value="">Select</option>
+                <option value="Burritos">Burritos</option>
+                <option value="BBQ">BBQ</option>
+                <option value="Sandwich">Sandwiches</option>
+                <option value="Fajitas">Fajitas</option>
+                <option value="Appetizers">Appetizers</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Pizza">Pizza</option> -->
+              </select>
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="cuisine">Cuisine:</label>
+            </td>
+            <td>
+              <select
+                class="form-select"
+                name="cuisine"
+                id="cuisine"
+                onfocus="loadCuisines();"
+              >
+                <option value="">Select</option>
+                <!-- <option value="American">American</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Seafood">Seafood</option> -->
+              </select>
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="foodimg">Image URL:</label>
+            </td>
+            <td>
+              <input type="url" id="foodimg" class="form-control" />
+            </td>
+          </div>
+        </tr>
+        <br />
+
+        <tr>
+          <td>
+            <button
+              type="reset"
+              class="discard"
+              onclick="window.history.back();"
+            >
+              Discard
+            </button>
+          </td>
+          <td>
+            <button type="submit" class="save">Save</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

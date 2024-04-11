@@ -1,0 +1,67 @@
+/* Body & Header */
+body {
+    background-color: rgb(227, 227, 227);
+}
+h1 {
+    padding-left: 20px;
+}
+
+/* Tables */
+table {
+    width:max-content;
+    padding:1%;
+    margin: 1%;
+    border:1px solid rgba(0, 0, 0, 0.276);
+    box-shadow: 1px 2px 3px black;
+}
+th {
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+td {
+    width: max-content;
+    margin: 0.5% 0;
+    padding:0.5% 0;
+    padding: 10px 10px;
+}    
+tr {
+    width: min-content;
+}
+
+/* Buttons */
+button {
+    padding: 10px 10px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #000000;
+    background-color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px 2px #050505;
+  }
+button:hover {
+    background-color: #827d7d; 
+    color: #fff
+}
+
+/* Images */
+img {
+    max-width: 175px;
+    max-height: 175px;
+}
+/* list_cuisine images */
+.BBQ-img {
+    max-width: 100px;
+    max-height: 100px;
+}
+.mex-img {
+    max-width: 100px;
+    max-height: 100px;
+}
+.seafood-img {
+    max-width: 100px;
+}
+
+

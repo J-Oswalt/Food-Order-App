@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Cuisine</title>
+    <link rel="stylesheet" href="../admin_styles/stylesheet.css" />
+    <script src="../admin_js/admincuisine.js"></script>
+  </head>
+  <body>
+    <h1>Add Cuisine</h1>
+    <hr />
+    <form
+      method="post"
+      action="<?php echo site_url('admin/add_cuisine');?>"
+      onsubmit="event.preventDefault(); addCuisine()"
+    >
+      <table>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="cuisine">Cuisine Name:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="cuisine"
+                class="form-control"
+                id="cuisine"
+                placeholder="Enter Cuisine Name"
+              />
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="desc">Cuisine Description:</label>
+            </td>
+            <td>
+              <textarea
+                name="desc"
+                id="desc"
+                cols="30"
+                rows="10"
+                placeholder="Description"
+              ></textarea>
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="isActive">Is Active:</label>
+              <input
+                type="checkbox"
+                name="isActive"
+                class="form-control"
+                id="isActive"
+              />
+            </td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="cuisineimg">Image URL:</label>
+            </td>
+            <td>
+              <input
+                type="url"
+                name="cuisineimg"
+                class="form-control"
+                id="cuisineimg"
+              />
+            </td>
+          </div>
+        </tr>
+        <br />
+
+        <tr>
+          <td>
+            <button type="reset" class="discard" onclick="window.history.back();">Discard</button>
+          </td>
+          <td>
+            <button type="submit" class="save">Save</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

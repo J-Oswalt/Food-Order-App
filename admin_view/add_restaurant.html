@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Restaurant</title>
+    <link rel="stylesheet" href="../admin_styles/stylesheet.css" />
+    <script src="../admin_js/adminrestaurants.js"></script>
+  </head>
+  <body>
+    <h1>Add Restaurants</h1>
+    <hr />
+    <form
+      method="post"
+      action="<?php echo site_url('admin/add_restaurant');?>"
+      onsubmit="event.preventDefault(); addRestaurant();"
+    >
+      <table>
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="restaurant">Restaurant Name:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="restaurant"
+                class="form-control"
+                id="restaurant"
+                placeholder="Enter Restaurant Name"
+              />
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="addr">Restaurant Address:</label>
+            </td>
+            <td>
+              <textarea
+                name="addr"
+                id="addr"
+                cols="30"
+                rows="5"
+                placeholder="example: 123 main st."
+              ></textarea>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="contact">Phone Number:</label>
+            </td>
+            <td>
+              <input
+                type="tel"
+                name="contact"
+                class="form-control"
+                id="contact"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="123-456-7890"
+              />
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="form-group">
+            <td>
+              <label for="pic">Restaurant Image:</label>
+            </td>
+            <td>
+              <input type="url" name="pic" class="form-control" id="pic" />
+            </td>
+          </div>
+        </tr>
+        <br />
+
+        <tr>
+          <td>
+            <button type="reset" class="discard" onclick="window.history.back();">Discard</button>
+          </td>
+          <td>
+            <button type="submit" class="save">Save</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

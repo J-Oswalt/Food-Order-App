@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="../admin_styles/stylesheet.css" />
+    <script src="../admin_js/adminmenu.js"></script>
+    <script src="../admin_js/adminloadcontent.js"></script>
+  </head>
+  <body onload="loadContent();">
+    <form
+      method="post"
+      action="<?php echo site_url('admin/add_menu');?>"
+      onsubmit="event.preventDefault(); addMenu();"
+    >
+      <h1>Add Menu</h1>
+
+      <label for="restaurant">Select Restaurant</label> <br />
+      <select
+        name="restaurant"
+        id="restaurant"
+        onfocus="loadRestaurants();"
+        onchange="loadFoodItems();"
+      >
+        <!-- <option value="">Jimmy Bear's BBQ</option>
+    <option value="">El Nopal</option>
+    <option value="">Sam's St Johns Seafood</option>  -->
+      </select>
+      <hr />
+
+      <table id="foodtable">
+        <tbody id="fooditems">
+          <!-- <div>
+            <tr>
+              <td>
+                <label for="cb1"></label>
+                <input type="checkbox" id="cb1" />
+              </td>
+              <td>
+                <img
+                  src="https://d1ralsognjng37.cloudfront.net/fb3cb186-8112-4c36-82d5-2393ca7902fb.webp"
+                  alt="The Bear"
+                />
+                <label for="theBear"></label>
+              </td>
+              <td>
+                <p>The Bear</p>
+              </td>
+              <td>
+                <label for=""></label>
+                <input type="number" min="0" class="foodprice" />
+              </td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td>
+                <label for="cb2"></label>
+                <input type="checkbox" id="cb2" />
+              </td>
+              <td>
+                <img
+                  src="https://passthesushi.com/wp-content/uploads/2011/06/manwich.jpg"
+                  alt="Three Blind Mice"
+                />
+                <label for=""></label>
+              </td>
+              <td>
+                <p>Three Blind Mice</p>
+              </td>
+              <td>
+                <label for=""></label>
+                <input type="number" min="0" class="foodprice" />
+              </td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td>
+                <label for="cb3"></label>
+                <input type="checkbox" id="cb3" />
+              </td>
+              <td>
+                <img
+                  src="https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/loaded-beef-fajita-baked-potato-recipe.jpg"
+                  alt="Loaded Potato Fajita"
+                />
+                <label for=""></label>
+              </td>
+              <td>
+                <p>Loaded Potato Fajita</p>
+              </td>
+              <td>
+                <label for=""></label>
+                <input type="number" min="0" class="foodprice" />
+              </td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td>
+                <label for="cb4"></label>
+                <input type="checkbox" id="cb4" />
+              </td>
+              <td>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgZoI-74NTOHRlcUZ2A9wtgoQu2WkxKwGWw&usqp=CAU"
+                  alt="Two Burritos"
+                />
+                <label for=""></label>
+              </td>
+              <td>
+                <p>Two Burritos</p>
+              </td>
+              <td>
+                <label for=""></label>
+                <input type="number" min="0" class="foodprice" disabled />
+              </td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td>
+                <label for="cb5"></label>
+                <input type="checkbox" id="cb5" />
+              </td>
+              <td>
+                <img
+                  src="https://i.ytimg.com/vi/AvrblWW5Bcw/sddefault.jpg"
+                  alt="Gator Tail"
+                />
+                <label for=""></label>
+              </td>
+              <td>
+                <p>Gator Tail</p>
+              </td>
+              <td>
+                <label for=""></label>
+                <input type="number" min="0" class="foodprice" />
+              </td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td>
+                <label for="cb6"></label>
+                <input type="checkbox" id="cb6" />
+              </td>
+              <td>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS13Y4yh4L7fQuvJX-K2XCRzi62HTZpY5Io7Q&usqp=CAU"
+                  alt="Scampi Fiesta"
+                />
+                <label for=""></label>
+              </td>
+              <td>
+                <p>Scampi Fiesta</p>
+              </td>
+              <td>
+                <label for=""></label>
+                <input type="number" min="0" class="foodprice" disabled />
+              </td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td>
+                <label for="cb7"></label>
+                <input type="checkbox" id="cb7" />
+              </td>
+              <td>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Er8XZB7tFe1wjpZT0rDcKUannEKRLya8rg&usqp=CAU"
+                  alt="Brisket Sandwich"
+                />
+                <label for=""></label>
+              </td>
+              <td>
+                <p>Brisket Sandwich</p>
+              </td>
+              <td>
+                <label for=""></label>
+                <input type="number" min="0" class="foodprice" />
+              </td>
+            </tr>
+          </div> -->
+        </tbody>
+      </table>
+      
+
+      <div class="col">
+        <button class="save" type="submit">Add to Menu</button>
+    </div>
+      <div class="col">
+        <button class="discard" type="reset" onclick="window.history.back()">Discard</button>
+    </div>
+    </form>
+  </body>
+</html>

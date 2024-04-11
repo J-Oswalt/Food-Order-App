@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/productsstyle.css">
+    <script src="../user_js/validation.js"></script>
+    <script src="../user_js/authenticateuser.js"></script>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="main">
+        <div class="container">
+            <form name="SignInForm" action="" class="was-validated" onsubmit="event.preventDefault(); signin();">
+                <h1>Sign In</h1>
+                <p id="signinValidity"></p>
+                <hr>
+                <table>
+                <tr>
+                    <td><label class="form-label" for="username"><b>Username: </b></label></td>
+                    <td><input class="form-control" type="text" name="username" id="username" placeholder="Enter Username" required></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label" for="pwd"><b>Password: </b></label></td>
+                    <td><input class="form-control" type="password" placeholder="Enter Password" name="pwd" id="pwd" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="signin">Sign In</button></td>
+                </tr>
+                </table>
+                <hr>
+                <div class="container">
+                    <p>Do not have an account? <a href="register.html">Register</a>.</p>
+                </div>
+            </form>    
+        </div>
+    </div>
+    <div class="footer"></div>
+    
+</body>
+</html>
