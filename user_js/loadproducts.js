@@ -1,5 +1,5 @@
 function loadProductContent(){
-    document.getElementById("wholemenu").innerHTML='<button class="btn btn-info" onclick=location.href="productdetail.html?wholemenu=yes"><h5>See All Menu Options</h5></button>';
+    document.getElementById("wholemenu").innerHTML='<button class="btn btn-info" onclick=location.href="../user_view/productdetail.html?wholemenu=yes"><h5>See All Menu Options</h5></button>';
     loadCuisines();
     loadCategories();
     loadRestaurants();
@@ -8,7 +8,7 @@ function loadProductContent(){
 let styleText="",hrefText="";
 
 function loadCuisines(){
-    hrefText="select_restaurant.html";
+    hrefText="../user_view/select_restaurant.html";
     styleText="width:100px;height:100px;border-radius:10px 25px;padding:5px;margin:auto;";
     let cuisineTable = document.getElementById("cuisine");
     let cuisineCollection = JSON.parse(window.localStorage.getItem("cuisine"));
@@ -22,7 +22,7 @@ function loadCuisines(){
     }
 }
 function loadCategories(){
-    hrefText="select_restaurant.html";
+    hrefText="../user_view/select_restaurant.html";
     styleText="width:100px;height:100px;border-radius:50%;padding:5px;margin:auto;";
     let categoryTable = document.getElementById("category");
     let categoryCollection = JSON.parse(window.localStorage.getItem("category"));
@@ -37,7 +37,7 @@ function loadCategories(){
 }
 
 function loadRestaurants(){
-    hrefText="cart.html";
+    hrefText="../user_view/cart.html";
     styleText="width:200px;height:200px;border-radius:5px 25px";
     let restaurantTable = document.getElementById("restaurant");
     let restaurantCollection = JSON.parse(window.localStorage.getItem("restaurant"));
