@@ -1,5 +1,5 @@
 function loadProductContent(){
-    document.getElementById("wholemenu").innerHTML='<button class="btn btn-info" onclick=location.href="../user_view/productdetail.html?wholemenu=yes"><h5>See All Menu Options</h5></button>';
+    document.getElementById("wholemenu").innerHTML='<button class="btn btn-info" onclick=location.href="user_view/productdetail.html?wholemenu=yes"><h5>See All Menu Options</h5></button>';
     loadCuisines();
     loadCategories();
     loadRestaurants();
