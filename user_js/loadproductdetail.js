@@ -18,8 +18,8 @@ function loadFoodItems(){
                 catch{}
                 optnText = optnText+'</select>'
         
-                var cells = '<tr><td><a href="../select_restaurant.html?fooditem='+foodItem.id+
-                '"><img src='+foodItem.image+' width="50px" height="50px"></a></td>'+'<td class="fooditems" id='+foodItem.id+'><a href="../select_restaurant.html?fooditem='+foodItem.id+'">'
+                var cells = '<tr><td><a href="../user_view/select_restaurant.html?fooditem='+foodItem.id+
+                '"><img src='+foodItem.image+' width="50px" height="50px"></a></td>'+'<td class="fooditems" id='+foodItem.id+'><a href="../user_view/select_restaurant.html?fooditem='+foodItem.id+'">'
                 +foodItem.title+'</td><td>'+optnText+'</a></td>'+'<td><input type="number" id="rate'+foodItem.id+'" class="foodrate" disabled></td>'+'<td><input type="number" id="qty'+foodItem.id+'" class="foodqty" min="0" max="10"></td>'+'<td><input type="number" id="price'+foodItem.id+'" class="foodprice" disabled></td></tr>'
             
                 foodItemsTable.innerHTML= foodItemsTable.innerHTML + cells;

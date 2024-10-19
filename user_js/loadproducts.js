@@ -8,7 +8,7 @@ function loadProductContent(){
 let styleText="",hrefText="";
 
 function loadCuisines(){
-    hrefText="../user_view/select_restaurant.html";
+    hrefText="user_view/select_restaurant.html";
     styleText="width:100px;height:100px;border-radius:10px 25px;padding:5px;margin:auto;";
     let cuisineTable = document.getElementById("cuisine");
     let cuisineCollection = JSON.parse(window.localStorage.getItem("cuisine"));
