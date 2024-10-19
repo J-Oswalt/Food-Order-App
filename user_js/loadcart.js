@@ -180,7 +180,7 @@ function placeOrder(){
         }
         saveOrder(orderId, orderObj);
         alert("Order placed successfully");
-        window.location.href="index.html";
+        window.location.href="../index.html";
     }   
 }
 

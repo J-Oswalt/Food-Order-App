@@ -31,7 +31,7 @@ function register(){
             
         let userData = JSON.stringify(Object.fromEntries(signedInUser));
             window.sessionStorage.setItem("signedInUser", userData);
-            window.location.href="../user_view/index.html";
+            window.location.href="../index.html";
         
         return true;
     }
@@ -85,7 +85,7 @@ function signin(){
             
             let userData = JSON.stringify(Object.fromEntries(signedInUser));
             window.sessionStorage.setItem("signedInUser", userData);
-            window.location.href="../user_view/index.html";
+            window.location.href="..index.html";
 
         }
         else
