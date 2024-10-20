@@ -8,7 +8,7 @@ h1 {
 
 /* Tables */
 table {
-    width:max-content;
+    width:98vw;
     padding:1%;
     margin: 1%;
     border:1px solid rgba(0, 0, 0, 0.276);
@@ -26,10 +26,6 @@ td {
 }    
 tr {
     width: min-content;
-}
-
-#fooditemstable {
-    max-width: 98 vw;
 }
 
 /* Buttons */
