@@ -28,6 +28,10 @@ tr {
     width: min-content;
 }
 
+#fooditemstable {
+    max-width: 98 vw;
+}
+
 /* Buttons */
 button {
     padding: 10px 10px;
