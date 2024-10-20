@@ -17,10 +17,11 @@ function loadRestaurantNames(){
         document.getElementById("restaurantheading").innerHTML="No Restaurants delivering "+headingText;
     }
     }
-    else{
-        document.getElementById("restaurantheading").innerHTML="No Restaurants delivering "+headingText;
-    }
+    // else{
+    //     document.getElementById("restaurantheading").innerHTML="No Restaurants delivering "+headingText;
+    // }
 }
+
 function loadByFilter(filterOption,filterValue){
 let Collection = JSON.parse(window.localStorage.getItem("fooditem"));
 if(Collection !=null){
